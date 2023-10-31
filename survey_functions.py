@@ -5,11 +5,14 @@ from typing import Callable, Any
 import openai
 import pandas as pd
 import streamlit as st
+from dotenv import load_dotenv
 
 from pysentimiento import create_analyzer
 from deep_translator import GoogleTranslator
 
-openai.api_key = st.secrets['OPENAI_API_KEY']
+# API Key
+load_dotenv()
+openai.api_key = os.getenv('OPENAI_API_KEY')
 
 
 def chatgpt(message: str) -> str:

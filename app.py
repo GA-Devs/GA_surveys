@@ -28,7 +28,7 @@ if '<' not in tipo:
 
     # Check if uploaded and select sheet to read
     if archivo is not None:
-        workbook = openpyxl.load_workbook(archivo)
+        workbook = openpyxl.load_workbook(archivo, read_only=True)
         hojas = workbook.sheetnames
         hoja = st.selectbox(
             'Elige hoja del excel con los datos:',
@@ -168,7 +168,7 @@ if '<' not in tipo:
                                 double_try_v2,
                                 args=(prompt_base,)
                             )
-                            dpm_df[op] = [re.sub(r'[\'"`]', '', i) for i in dpm_df[i]]
+                            dpm_df[op] = [re.sub(r'[\'"`]', '', i) for i in dpm_df[op]]
                         df = df.drop('codes', axis=1)
 
                     # Get results
