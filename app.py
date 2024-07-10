@@ -50,7 +50,7 @@ if '<' not in tipo:
 
             # Check special colummn
             special = False
-            if 'DPTM' in [i.split('-')[0] for i in df[ga_code].unique()]:
+            if 'DPTM' in [str(i).split('-')[0] for i in df[ga_code].unique()]:
                 special = True
                 col1, col2, col3 = st.columns(3)
 
