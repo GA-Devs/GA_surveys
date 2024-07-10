@@ -7,5 +7,5 @@ deep-translator==1.11.4
 pysentimiento==0.7.3
 XlsxWriter==3.1.2
 python-dotenv==1.0.0
-accelerate==0.22.0
+accelerate==0.27.2
 transformers==4.41.2
